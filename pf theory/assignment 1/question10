@@ -1,0 +1,19 @@
+#QUES10
+START
+    num = "some string with digits"
+    n = length of num
+    i = 0
+    ans = 0
+    
+    WHILE i < n DO
+        IF num[i] == '9' THEN
+            DELETE num[i+1]
+            n = n - 1
+            ans ==9
+        ELSE
+            result == i
+        END IF
+        i = i + 1
+    END WHILE
+   OUTPUT result
+END
