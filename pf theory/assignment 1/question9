@@ -1,0 +1,35 @@
+#Ques 9
+Start
+    Input birth_date
+    Input current_date
+
+    If month > 12:
+        Print "Invalid date"
+        End
+
+    If (month == 2 AND day > 29) OR (month in [4, 6, 9, 11] AND day > 30):
+        Print "Invalid date"
+        End
+
+    If day > 31:
+        Print "Invalid date"
+        End
+
+    If month <= 12 AND day <= 31:
+        Calculate age_year = current_year - birth_year
+        Calculate month_age = age_year * 12
+        Calculate days_age = age_year * 365
+
+        If (year % 4 == 0 AND year % 100 != 0) OR (year % 400 == 0):
+            Print "Valid date"
+        Else:
+            Print "Invalid date"
+        
+        If (month is September, June, April, November) AND day < 30:
+            Print "Valid date"
+        Else:
+            Print "Invalid date"
+PRINT AGE IN YEARS
+            AGE IN MONTHS
+             AGE IN DAYS 
+END
