@@ -1,0 +1,16 @@
+#Ques 11
+START
+    INPUT A, B
+LOOP THROUGH
+WHILE
+    IF B == 0 THEN
+           GCD=A
+        IF GCD==1 THEN
+        OUTPUT "Coprime"
+            ELSE    OUTPUT “Not Coprime”
+        END
+    END IF
+     R = A/B
+      A=B, B=R
+END WHILE
+END
