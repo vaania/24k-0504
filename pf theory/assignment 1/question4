@@ -1,0 +1,25 @@
+#Ques 4
+
+START
+
+Input:
+  - money
+  - onion_price, onion_quantity
+  - tomato_price, tomato_quantity
+  - grapes_price, grapes_quantity
+  - apricot_price, apricot_quantity
+
+Calculate total_cost:
+  total_cost = (onion_price * onion_quantity) +
+               (tomato_price * tomato_quantity) +
+               (grapes_price * grapes_quantity) +
+               (apricot_price * apricot_quantity)
+
+IF money < total_cost THEN
+    Print "Insufficient money"
+ELSE
+    change = money - total_cost
+    Print change
+ENDIF
+
+END
