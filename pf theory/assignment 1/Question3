@@ -1,0 +1,29 @@
+#Ques 3
+
+START
+
+Input:
+  - province
+  - gender
+  - age
+
+IF province == 'Sindh' THEN
+    IF age >= 18 THEN
+        Print "Eligible"
+    ELSE
+        Print "Not eligible"
+    ENDIF
+ELSE
+    IF gender == 'female' THEN
+        IF age >= 16 THEN
+            Print "Eligible"
+        ELSE
+            Print "Not eligible"
+        ENDIF
+    ELSE
+        Print "Not eligible"
+    ENDIF
+ENDIF
+
+END
+
