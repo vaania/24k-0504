@@ -1,0 +1,13 @@
+
+#Ques 2
+START
+INPUT
+  Number n
+IF N>0 
+ IF   n%2==0
+    “EVEN”
+  ELSE 
+     “ODD”
+ END IF
+END IF
+END
