@@ -1,0 +1,34 @@
+#Ques 5
+
+START
+
+Check input parameters:
+  - Crop type
+  - Soil moisture level
+  - Rainfall status
+
+IF crop == corn THEN
+    IF soil moisture < 40 THEN
+        Irrigate
+    ELSE
+        No need to irrigate
+    ENDIF
+ELSE IF crop == wheat THEN
+    IF soil moisture < 30 THEN
+        Irrigate
+    ELSE
+        Check rainfall in the last 48 hours
+        IF rainfall < 45 THEN
+            Check soil moisture again
+            IF soil moisture < 25 THEN
+                Irrigate
+            ELSE
+                No need to irrigate
+            ENDIF
+        ELSE
+            No need to irrigate
+        ENDIF
+    ENDIF
+ENDIF
+
+END
