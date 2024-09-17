@@ -1,0 +1,10 @@
+#Ques 8
+START
+INPUT   NUMBER n
+WHILE n>0 
+  Last digit=n%10
+  Sum=sum+last digit
+  N=n/10
+END WHILE
+PRINT SUM
+END 
