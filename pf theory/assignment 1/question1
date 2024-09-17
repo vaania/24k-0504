@@ -1,0 +1,9 @@
+#Ques 1
+START
+INPUT 
+  Speed in km per second
+Speed=Speed in km per second*0.621371
+Speed in miles per hour=Speed*3600
+OUTPUT
+Speed in miles per hour
+END 
