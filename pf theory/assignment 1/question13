@@ -1,0 +1,27 @@
+#Ques 13
+START
+    INPUT N, M, W
+
+    IF N == 0 THEN
+        OUTPUT "N cannot be measured"
+        END
+    END IF
+
+    R = min(N, M)
+    WHILE R > 0 DO
+        IF M % N == 0 THEN
+            GCD = N
+        ELSE
+            GCD = R
+        END IF
+
+        IF W % GCD == 0 THEN
+            IF W > M THEN
+                OUTPUT "W can be measured"
+            ELSE
+                OUTPUT "W cannot be measured"
+            END IF
+        ELSE
+            OUTPUT "N cannot be measured"
+        END IF
+END
