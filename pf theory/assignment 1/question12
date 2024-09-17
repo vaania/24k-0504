@@ -1,0 +1,18 @@
+#Ques 12
+Start
+    Set jug5L = 0, jug3L = 0
+    Set jug A = 0
+    
+    Fill jug3L with 3L water
+    
+    While (jug5L is not 5L):
+        Pour jug3L into jug5L
+        If jug5L is full (5L):
+            Add the filled amount from jug5L to jug A
+            Empty jug5L into jug A
+        
+        Fill jug3L again with 3L water
+        
+    Pour the 4L measured into the sensor quickly (jug A will now have 4L)
+
+End
