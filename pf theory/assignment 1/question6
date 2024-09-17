@@ -1,0 +1,24 @@
+#QUES6
+Start
+    Input ride, height, age
+
+    If height < 54:
+        Print "Not Eligible"
+        End
+    Else:
+        If ride == "Sky Swing":
+            Print "Eligible"
+        Else If ride == "Carousel":
+            If height >= 48 AND age >= 10:
+                Print "Eligible"
+            Else:
+                Print "Not Eligible"
+            End If
+        Else:
+            If age >= 5:
+                Print "Eligible"
+            Else:
+                Print "Not Eligible"
+            End If
+        End If
+End
