@@ -1,1 +1,77 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX_EMPLOYEE 50
 
+struct date{
+    int day;
+    int month;
+    int year;
+};
+
+struct employee{
+    char employeename[50];
+    int employeecode;
+    struct date joiningdate;
+};
+
+void storevalues(struct employee *e){
+
+        printf("\nEnter name of employee: ");
+        getchar();
+        scanf("%[^\n]s", e->employeename);
+
+        printf("Enter employee code: ");
+        scanf("%d", &e->employeecode);
+
+        printf("Enter joining date of employee (dd/mm/yy): ");
+        scanf("%d %d %d", &e->joiningdate.day, &e->joiningdate.month, &e->joiningdate.year);
+}
+
+void checktenure(struct employee employees[], int count){
+    int current_day, current_month, current_year, yearcount=0;
+
+    printf("\nEnter the current date (DD MM YYYY): ");
+    scanf("%d %d %d", &current_day, &current_month, &current_year);
+
+    printf("\nEmployees with tenure of more than three years:\n");
+    printf("------------------------------------------------\n");
+
+    for(int i=0; i<count; i++){
+    int years = current_year - employees[i].joiningdate.year;
+    int months = current_month - employees[i].joiningdate.month;
+    int days = current_day - employees[i].joiningdate.day;
+    
+     if (days<0) {
+        months--;
+        days += 30;
+    }
+    if (months<0) {
+        years--;
+        months += 12;
+    }
+
+    if (years > 3 || (years == 3 && (months > 0 || days > 0))) {
+            printf("Employee Code: %d\n", employees[i].employeecode);
+            printf("Employee Name: %s\n", employees[i].employeename);
+            printf("Date of Joining: %02d/%02d/%04d\n",
+                   employees[i].joiningdate.day,
+                   employees[i].joiningdate.month,
+                   employees[i].joiningdate.year);
+            printf("Tenure: %d years, %d months, %d days\n\n", years, months, days);
+        yearcount++;
+        }
+    }
+    printf("Number of Employees with tenure of more than three years are: %d\n", yearcount);
+}
+
+int main (){
+    struct employee employees[4];
+
+    for(int i=0; i < 4; i++){
+        printf("\nEnter details for employee%d:\n", i + 1);
+        storevalues(&employees[i]);
+    }
+    checktenure(employees, 4);
+
+    return 0;
+}
